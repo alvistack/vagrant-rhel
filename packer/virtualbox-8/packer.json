@@ -17,6 +17,7 @@
       "iso_checksum": "sha256:30fd8dff2d29a384bd97886fa826fa5be872213c81e853eae3f9d9674f720ad0",
       "iso_url": "http://ia801808.us.archive.org/23/items/rhel-8.3-x86_64-dvd/rhel-8.3-x86_64-dvd.iso",
       "memory": 4096,
+      "shutdown_command": "sudo shutdown -h now",
       "ssh_password": "vagrant",
       "ssh_port": 22,
       "ssh_timeout": "3600s",
