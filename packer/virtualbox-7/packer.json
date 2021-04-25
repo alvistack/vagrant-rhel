@@ -14,7 +14,7 @@
       "guest_os_type": "RedHat_64",
       "headless": true,
       "http_directory": "./",
-      "iso_checksum": "sha256:19d653ce2f04f202e79773a0cbeda82070e7527557e814ebbce658773fbe8191",
+      "iso_checksum": "19d653ce2f04f202e79773a0cbeda82070e7527557e814ebbce658773fbe8191",
       "iso_url": "http://ia801705.us.archive.org/6/items/rhel-server-7.9-x86_64-dvd/rhel-server-7.9-x86_64-dvd.iso",
       "memory": 4096,
       "shutdown_command": "sudo shutdown -h now",
