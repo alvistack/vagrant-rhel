@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Support RHEL 8.4
   - Upgrade minimal Ansible support to 4.0.0
 
 ## 20210313.1.1 - 2021-03-13
