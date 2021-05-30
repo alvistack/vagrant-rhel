@@ -4,9 +4,9 @@
       "accelerator": "kvm",
       "boot_command": [
         "<tab> ",
-        "text<wait> ",
-        "net.ifnames=0 biosdevname=0<wait> ",
-        "ks=http://{{.HTTPIP}}:{{.HTTPPort}}/ks.cfg<wait> ",
+        "text<wait5> ",
+        "net.ifnames=0 biosdevname=0<wait5> ",
+        "ks=http://{{.HTTPIP}}:{{.HTTPPort}}/ks.cfg<wait5> ",
         "<enter>"
       ],
       "boot_wait": "10s",
