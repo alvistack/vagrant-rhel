@@ -2,13 +2,23 @@
   "builders": [
     {
       "boot_command": [
+        "<tab><tab><tab><tab><tab><tab><tab><tab><tab><tab><wait>",
+        "<tab><tab><tab><tab><tab><tab><tab><tab><tab><tab><wait>",
+        "<tab><tab><tab><tab><tab><tab><tab><tab><tab><tab><wait>",
+        "<tab><tab><tab><tab><tab><tab><tab><tab><tab><tab><wait>",
+        "<tab><tab><tab><tab><tab><tab><tab><tab><tab><tab><wait>",
+        "<tab><tab><tab><tab><tab><tab><tab><tab><tab><tab><wait>",
+        "<tab><tab><tab><tab><tab><tab><tab><tab><tab><tab><wait>",
+        "<tab><tab><tab><tab><tab><tab><tab><tab><tab><tab><wait>",
+        "<tab><tab><tab><tab><tab><tab><tab><tab><tab><tab><wait>",
+        "<tab><tab><tab><tab><tab><tab><tab><tab><tab><tab><wait>",
         "<tab> ",
         "text<wait5> ",
         "net.ifnames=0 biosdevname=0<wait5> ",
         "ks=http://{{.HTTPIP}}:{{.HTTPPort}}/ks.cfg<wait5> ",
         "<enter>"
       ],
-      "boot_wait": "10s",
+      "boot_wait": "3s",
       "cpus": 2,
       "disk_size": 131072,
       "guest_os_type": "RedHat_64",
