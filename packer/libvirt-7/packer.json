@@ -16,7 +16,7 @@
         "<tab> ",
         "text<wait5> ",
         "net.ifnames=0 biosdevname=0<wait5> ",
-        "ks=http://{{.HTTPIP}}:{{.HTTPPort}}/ks.cfg<wait5> ",
+        "inst.ks=http://{{.HTTPIP}}:{{.HTTPPort}}/ks.cfg<wait5> ",
         "<enter>"
       ],
       "boot_wait": "3s",
@@ -54,6 +54,7 @@
         "sudo rm -rf \"$_IMAGE\"",
         "sudo chmod a+r /boot/vmlinuz*",
         "sudo virt-sysprep --operations defaults,-ssh-userdir,-customize -a \"$_IMAGE.convert\"",
+        "sudo virt-customize -a \"$_IMAGE.convert\" --firstboot-command \"ansible-playbook /etc/ansible/playbooks/verify.yml\"",
         "sudo virt-sparsify --in-place \"$_IMAGE.convert\"",
         "sudo qemu-img convert -f qcow2 -O qcow2 -c \"$_IMAGE.convert\" \"$_IMAGE\"",
         "sudo rm -rf \"$_IMAGE.convert\""
