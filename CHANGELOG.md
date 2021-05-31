@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Initialize with `verify.yml` with first start
   - Support RHEL 8.4
   - Upgrade minimal Ansible support to 4.0.0
 
