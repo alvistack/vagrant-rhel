@@ -13,7 +13,7 @@
         "<tab><tab><tab><tab><tab><tab><tab><tab><tab><tab><wait>",
         "<tab><tab><tab><tab><tab><tab><tab><tab><tab><tab><wait>",
         "<tab><tab><tab><tab><tab><tab><tab><tab><tab><tab><wait>",
-        "<tab> ",
+        "<tab><wait5> ",
         "text<wait5> ",
         "net.ifnames=0 biosdevname=0<wait5> ",
         "inst.ks=http://{{.HTTPIP}}:{{.HTTPPort}}/ks.cfg<wait5> ",
