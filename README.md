@@ -1,5 +1,7 @@
 # Vagrant Box Packaging for RHEL
 
+<img src="/alvistack.svg" width="75" alt="AlviStack">
+
 [![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/vagrant-rhel/master)](https://gitlab.com/alvistack/vagrant-rhel/-/pipelines)
 [![GitHub release](https://img.shields.io/github/release/alvistack/vagrant-rhel.svg)](https://github.com/alvistack/vagrant-rhel/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/vagrant-rhel.svg)](https://github.com/alvistack/vagrant-rhel/blob/master/LICENSE)
