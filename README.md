@@ -3,7 +3,7 @@
 <img src="/alvistack.svg" width="75" alt="AlviStack">
 
 [![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/vagrant-rhel/master)](https://gitlab.com/alvistack/vagrant-rhel/-/pipelines)
-[![GitHub release](https://img.shields.io/github/release/alvistack/vagrant-rhel.svg)](https://github.com/alvistack/vagrant-rhel/releases)
+[![GitHub tag](https://img.shields.io/github/tag/alvistack/vagrant-rhel.svg)](https://github.com/alvistack/vagrant-rhel/tags)
 [![GitHub license](https://img.shields.io/github/license/alvistack/vagrant-rhel.svg)](https://github.com/alvistack/vagrant-rhel/blob/master/LICENSE)
 [![Vagrant Box download](https://img.shields.io/badge/dynamic/json?label=alvistack%2Frhel-8&query=%24.boxes%5B%3A1%5D.downloads&url=https%3A%2F%2Fapp.vagrantup.com%2Fapi%2Fv1%2Fsearch%3Fq%3Dalvistack%2Frhel-8)](https://app.vagrantup.com/alvistack/boxes/rhel-8)
 
@@ -52,7 +52,7 @@ Once you have [Vagrant](https://www.vagrantup.com/docs/installation) and [Virtau
 
 ### `YYYYMMDD.Y.Z`
 
-Release tags could be find from [GitHub Release](https://github.com/alvistack/vagrant-rhel/releases) of this repository. Thus using these tags will ensure you are running the most up to date stable version of this image.
+Release tags could be find from [GitHub Release](https://github.com/alvistack/vagrant-rhel/tags) of this repository. Thus using these tags will ensure you are running the most up to date stable version of this image.
 
 ### `YYYYMMDD.0.0`
 
