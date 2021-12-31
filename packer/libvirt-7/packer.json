@@ -40,7 +40,7 @@
       "http_directory": "./",
       "iso_checksum": "19d653ce2f04f202e79773a0cbeda82070e7527557e814ebbce658773fbe8191",
       "iso_url": "http://ia801705.us.archive.org/6/items/rhel-server-7.9-x86_64-dvd/rhel-server-7.9-x86_64-dvd.iso",
-      "memory": 8192,
+      "memory": 16384,
       "net_device": "virtio-net",
       "qemu_binary": "kvm",
       "shutdown_command": "sudo shutdown -h now",
