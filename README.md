@@ -13,6 +13,9 @@ Learn more about RHEL: <https://www.redhat.com/en/technologies/linux-platforms/e
 
 ## Supported Boxes and Respective Packer Template Links
 
+  - [`alvistack/rhel-9`](https://app.vagrantup.com/alvistack/boxes/rhel-9)
+      - [`packer/libvirt-9/packer.json`](https://github.com/alvistack/vagrant-rhel/blob/master/packer/libvirt-9/packer.json)
+      - [`packer/virtualbox-9/packer.json`](https://github.com/alvistack/vagrant-rhel/blob/master/packer/virtualbox-9/packer.json)
   - [`alvistack/rhel-8`](https://app.vagrantup.com/alvistack/boxes/rhel-8)
       - [`packer/libvirt-8/packer.json`](https://github.com/alvistack/vagrant-rhel/blob/master/packer/libvirt-8/packer.json)
       - [`packer/virtualbox-8/packer.json`](https://github.com/alvistack/vagrant-rhel/blob/master/packer/virtualbox-8/packer.json)
