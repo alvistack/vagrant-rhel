@@ -5,7 +5,7 @@
 [![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/vagrant-rhel/master)](https://gitlab.com/alvistack/vagrant-rhel/-/pipelines)
 [![GitHub tag](https://img.shields.io/github/tag/alvistack/vagrant-rhel.svg)](https://github.com/alvistack/vagrant-rhel/tags)
 [![GitHub license](https://img.shields.io/github/license/alvistack/vagrant-rhel.svg)](https://github.com/alvistack/vagrant-rhel/blob/master/LICENSE)
-[![Vagrant Box download](https://img.shields.io/badge/dynamic/json?label=alvistack%2Frhel-8&query=%24.boxes%5B%3A1%5D.downloads&url=https%3A%2F%2Fapp.vagrantup.com%2Fapi%2Fv1%2Fsearch%3Fq%3Dalvistack%2Frhel-8)](https://app.vagrantup.com/alvistack/boxes/rhel-8)
+[![Vagrant Box download](https://img.shields.io/badge/dynamic/json?label=alvistack%2Frhel-9&query=%24.boxes%5B%3A1%5D.downloads&url=https%3A%2F%2Fapp.vagrantup.com%2Fapi%2Fv1%2Fsearch%3Fq%3Dalvistack%2Frhel-9)](https://app.vagrantup.com/alvistack/boxes/rhel-9)
 
 Red Hat Enterprise Linux (often abbreviated to RHEL) is a Linux distribution developed by Red Hat for the commercial market. Red Hat Enterprise Linux is released in server versions for x86-64, Power ISA, ARM64, and IBM Z and a desktop version for x86-64. All of Red Hat's official support and training, together with the Red Hat Certification Program, focuses on the Red Hat Enterprise Linux platform.
 
@@ -40,7 +40,7 @@ Learn more about RHEL: <https://www.redhat.com/en/technologies/linux-platforms/e
 Once you have [Vagrant](https://www.vagrantup.com/docs/installation) and [VirtaulBox](https://www.virtualbox.org/) installed, run the following commands under your [project directory](https://learn.hashicorp.com/tutorials/vagrant/getting-started-project-setup?in=vagrant/getting-started):
 
     # Initialize Vagrant
-    vagrant init alvistack/rhel-8
+    vagrant init alvistack/rhel-9
     
     # Start the virtual machine
     vagrant up
@@ -50,6 +50,15 @@ Once you have [Vagrant](https://www.vagrantup.com/docs/installation) and [Virtau
     
     # Terminate the virtual machine
     vagrant destroy --force
+
+### Molecule
+
+You could also run our [Molecule](https://molecule.readthedocs.io/en/stable/) test cases if you have [Vagrant](https://www.vagrantup.com/) and [Libvirt](https://libvirt.org/) installed, e.g.
+
+    # Run Molecule on RHEL 9
+    molecule converge -s libvirt-9
+
+Please refer to [.gitlab-ci.yml](.gitlab-ci.yml) for more information on running Molecule.
 
 ## Versioning
 
