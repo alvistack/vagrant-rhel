@@ -14,14 +14,14 @@ Learn more about RHEL: <https://www.redhat.com/en/technologies/linux-platforms/e
 ## Supported Boxes and Respective Packer Template Links
 
   - [`alvistack/rhel-9`](https://app.vagrantup.com/alvistack/boxes/rhel-9)
-      - [`packer/libvirt-9/packer.json`](https://github.com/alvistack/vagrant-rhel/blob/master/packer/libvirt-9/packer.json)
-      - [`packer/virtualbox-9/packer.json`](https://github.com/alvistack/vagrant-rhel/blob/master/packer/virtualbox-9/packer.json)
+      - [`packer/rhel-9-libvirt/packer.json`](https://github.com/alvistack/vagrant-rhel/blob/master/packer/rhel-9-libvirt/packer.json)
+      - [`packer/rhel-9-virtualbox/packer.json`](https://github.com/alvistack/vagrant-rhel/blob/master/packer/rhel-9-virtualbox/packer.json)
   - [`alvistack/rhel-8`](https://app.vagrantup.com/alvistack/boxes/rhel-8)
-      - [`packer/libvirt-8/packer.json`](https://github.com/alvistack/vagrant-rhel/blob/master/packer/libvirt-8/packer.json)
-      - [`packer/virtualbox-8/packer.json`](https://github.com/alvistack/vagrant-rhel/blob/master/packer/virtualbox-8/packer.json)
+      - [`packer/rhel-8-libvirt/packer.json`](https://github.com/alvistack/vagrant-rhel/blob/master/packer/rhel-8-libvirt/packer.json)
+      - [`packer/rhel-8-virtualbox/packer.json`](https://github.com/alvistack/vagrant-rhel/blob/master/packer/rhel-8-virtualbox/packer.json)
   - [`alvistack/rhel-7`](https://app.vagrantup.com/alvistack/boxes/rhel-7)
-      - [`packer/libvirt-7/packer.json`](https://github.com/alvistack/vagrant-rhel/blob/master/packer/libvirt-7/packer.json)
-      - [`packer/virtualbox-7/packer.json`](https://github.com/alvistack/vagrant-rhel/blob/master/packer/virtualbox-7/packer.json)
+      - [`packer/rhel-7-libvirt/packer.json`](https://github.com/alvistack/vagrant-rhel/blob/master/packer/rhel-7-libvirt/packer.json)
+      - [`packer/rhel-7-virtualbox/packer.json`](https://github.com/alvistack/vagrant-rhel/blob/master/packer/rhel-7-virtualbox/packer.json)
 
 ## Overview
 
@@ -56,7 +56,7 @@ Once you have [Vagrant](https://www.vagrantup.com/docs/installation) and [Virtau
 You could also run our [Molecule](https://molecule.readthedocs.io/en/stable/) test cases if you have [Vagrant](https://www.vagrantup.com/) and [Libvirt](https://libvirt.org/) installed, e.g.
 
     # Run Molecule on RHEL 9
-    molecule converge -s libvirt-9
+    molecule converge -s rhel-9-libvirt
 
 Please refer to [.gitlab-ci.yml](.gitlab-ci.yml) for more information on running Molecule.
 
