@@ -248,6 +248,8 @@ build:rhel-9-virtualbox:
   variables:
     _BOX: "rhel-9"
     _PROVIDER: "virtualbox"
+  allow_failure: true
+  retry: 0
 
 test:rhel-9-virtualbox:
   <<: *job-molecule-test
@@ -262,6 +264,8 @@ test:rhel-9-virtualbox:
     _PROVIDER: "virtualbox"
   needs:
     - build:rhel-9-virtualbox
+  allow_failure: true
+  retry: 0
 
 deploy:rhel-9-virtualbox:
   <<: *job-vagrant-cloud-provider-upload
@@ -276,6 +280,8 @@ deploy:rhel-9-virtualbox:
     _PROVIDER: "virtualbox"
   needs:
     - test:rhel-9-virtualbox
+  allow_failure: true
+  retry: 0
 
 build:rhel-8-libvirt:
   <<: *job-packer-build
@@ -326,6 +332,8 @@ build:rhel-8-virtualbox:
   variables:
     _BOX: "rhel-8"
     _PROVIDER: "virtualbox"
+  allow_failure: true
+  retry: 0
 
 test:rhel-8-virtualbox:
   <<: *job-molecule-test
@@ -340,6 +348,8 @@ test:rhel-8-virtualbox:
     _PROVIDER: "virtualbox"
   needs:
     - build:rhel-8-virtualbox
+  allow_failure: true
+  retry: 0
 
 deploy:rhel-8-virtualbox:
   <<: *job-vagrant-cloud-provider-upload
@@ -354,6 +364,8 @@ deploy:rhel-8-virtualbox:
     _PROVIDER: "virtualbox"
   needs:
     - test:rhel-8-virtualbox
+  allow_failure: true
+  retry: 0
 
 build:rhel-7-libvirt:
   <<: *job-packer-build
@@ -404,6 +416,8 @@ build:rhel-7-virtualbox:
   variables:
     _BOX: "rhel-7"
     _PROVIDER: "virtualbox"
+  allow_failure: true
+  retry: 0
 
 test:rhel-7-virtualbox:
   <<: *job-molecule-test
@@ -418,6 +432,8 @@ test:rhel-7-virtualbox:
     _PROVIDER: "virtualbox"
   needs:
     - build:rhel-7-virtualbox
+  allow_failure: true
+  retry: 0
 
 deploy:rhel-7-virtualbox:
   <<: *job-vagrant-cloud-provider-upload
@@ -432,3 +448,5 @@ deploy:rhel-7-virtualbox:
     _PROVIDER: "virtualbox"
   needs:
     - test:rhel-7-virtualbox
+  allow_failure: true
+  retry: 0
