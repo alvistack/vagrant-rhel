@@ -249,7 +249,7 @@ build:rhel-9-virtualbox:
     _BOX: "rhel-9"
     _PROVIDER: "virtualbox"
   needs:
-    - build:rhel-9-libvirt
+    - deploy:rhel-9-libvirt
 
 test:rhel-9-virtualbox:
   <<: *job-molecule-test
@@ -329,7 +329,7 @@ build:rhel-8-virtualbox:
     _BOX: "rhel-8"
     _PROVIDER: "virtualbox"
   needs:
-    - build:rhel-8-libvirt
+    - deploy:rhel-8-libvirt
 
 test:rhel-8-virtualbox:
   <<: *job-molecule-test
@@ -409,7 +409,7 @@ build:rhel-7-virtualbox:
     _BOX: "rhel-7"
     _PROVIDER: "virtualbox"
   needs:
-    - build:rhel-7-libvirt
+    - deploy:rhel-7-libvirt
 
 test:rhel-7-virtualbox:
   <<: *job-molecule-test
