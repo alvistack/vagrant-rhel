@@ -34,7 +34,7 @@
       "headless": true,
       "http_directory": "./",
       "iso_checksum": "5c802147aa58429b21e223ee60e347e850d6b0d8680930c4ffb27340ffb687a8",
-      "iso_url": "http://ia801200.us.archive.org/14/items/rhel-9.3-x86_64-resources/rhel-9.3-x86_64-dvd.iso",
+      "iso_url": "http://ia600500.us.archive.org/28/items/rhel-9.3-x86_64-resources/rhel-9.3-x86_64-dvd.iso",
       "memory": 16384,
       "shutdown_command": "sudo shutdown -h now",
       "ssh_password": "vagrant",
