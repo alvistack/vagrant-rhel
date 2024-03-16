@@ -87,12 +87,32 @@
   ],
   "provisioners": [
     {
+      "environment_vars": [
+        "REDHAT_USERNAME={{user `REDHAT_USERNAME`}}",
+        "REDHAT_PASSWORD={{user `REDHAT_PASSWORD`}}"
+      ],
+      "inline": [
+        "set -eu",
+        "sudo sed -i 's/\\(def in_container():\\)/\\1\\n    return False/g' /usr/lib64/python*/*-packages/rhsm/config.py",
+        "sudo subscription-manager register --username=$REDHAT_USERNAME --password=$REDHAT_PASSWORD --auto-attach",
+        "sudo yum makecache",
+        "sudo yum update -y",
+        "sudo yum install -y --allowerasing ca-certificates curl gcc glibc-common glibc-langpack-en hostname iproute python3 sudo yum-utils",
+        "sudo yum install -y qemu-guest-agent"
+      ],
+      "type": "shell"
+    },
+    {
       "galaxy_file": "./ansible-galaxy-requirements.yml",
       "inventory_directory": "./",
       "playbook_file": "./packer.yml",
       "type": "ansible",
       "user": "vagrant"
     }
-  ]
+  ],
+  "variables": {
+    "REDHAT_PASSWORD": "{{env `REDHAT_PASSWORD`}}",
+    "REDHAT_USERNAME": "{{env `REDHAT_USERNAME`}}"
+  }
 }
 

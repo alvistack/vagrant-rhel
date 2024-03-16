@@ -30,6 +30,7 @@
       "boot_wait": "1s",
       "cpus": 2,
       "disk_size": 131072,
+      "guest_additions_mode": "attach",
       "guest_os_type": "RedHat_64",
       "headless": true,
       "http_directory": "./",
@@ -88,12 +89,36 @@
   ],
   "provisioners": [
     {
+      "environment_vars": [
+        "REDHAT_USERNAME={{user `REDHAT_USERNAME`}}",
+        "REDHAT_PASSWORD={{user `REDHAT_PASSWORD`}}"
+      ],
+      "inline": [
+        "set -eu",
+        "sudo sed -i 's/\\(def in_container():\\)/\\1\\n    return False/g' /usr/lib64/python*/*-packages/rhsm/config.py",
+        "sudo subscription-manager register --username=$REDHAT_USERNAME --password=$REDHAT_PASSWORD --auto-attach",
+        "sudo yum makecache",
+        "sudo yum update -y",
+        "sudo yum install -y ca-certificates curl gcc glibc-common hostname iproute python3 sudo yum-utils",
+        "sudo yum install -y http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm",
+        "sudo yum install -y bzip2 dkms kernel-devel",
+        "sudo mount /dev/sr1 /mnt",
+        "(echo 'y' | sudo sh /mnt/VBoxLinuxAdditions.run) || echo $?",
+        "sudo umount /mnt"
+      ],
+      "type": "shell"
+    },
+    {
       "galaxy_file": "./ansible-galaxy-requirements.yml",
       "inventory_directory": "./",
       "playbook_file": "./packer.yml",
       "type": "ansible",
       "user": "vagrant"
     }
-  ]
+  ],
+  "variables": {
+    "REDHAT_PASSWORD": "{{env `REDHAT_PASSWORD`}}",
+    "REDHAT_USERNAME": "{{env `REDHAT_USERNAME`}}"
+  }
 }
 
