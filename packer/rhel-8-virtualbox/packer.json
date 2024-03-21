@@ -30,7 +30,7 @@
       "boot_wait": "1s",
       "cpus": 2,
       "disk_size": 131072,
-      "guest_additions_mode": "attach",
+      "guest_additions_mode": "upload",
       "guest_os_type": "RedHat_64",
       "headless": true,
       "http_directory": "./",
@@ -102,7 +102,7 @@
         "sudo yum install -y ca-certificates curl gcc glibc-common glibc-langpack-en hostname iproute python3 sudo yum-utils",
         "sudo yum install -y http://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm",
         "sudo yum install -y bzip2 dkms kernel-devel",
-        "sudo mount /dev/sr1 /mnt",
+        "sudo mount -o loop VBoxGuestAdditions.iso /mnt",
         "(echo 'y' | sudo sh /mnt/VBoxLinuxAdditions.run) || echo $?",
         "sudo umount /mnt"
       ],
