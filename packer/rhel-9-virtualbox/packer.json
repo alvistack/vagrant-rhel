@@ -23,7 +23,7 @@
         "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
         "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
         "vmlinuz initrd=initrd.img inst.stage2=cdrom quite text <wait5>",
-        "net.ifnames=0 biosdevname=0 systemd.unified_cgroup_hierarchy=0 <wait5>",
+        "net.ifnames=0 biosdevname=0 systemd.unified_cgroup_hierarchy=1 <wait5>",
         "inst.ks=http://{{.HTTPIP}}:{{.HTTPPort}}/ks.cfg <wait5>",
         "<enter>"
       ],
