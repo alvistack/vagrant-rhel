@@ -95,7 +95,7 @@
         "set -eu",
         "sudo sed -i 's/\\(def in_container():\\)/\\1\\n    return False/g' /usr/lib64/python*/*-packages/rhsm/config.py",
         "sudo subscription-manager register --username=$REDHAT_USERNAME --password=$REDHAT_PASSWORD --auto-attach",
-        "sudo sed -i 's/enabled=1/enabled=0/g' /etc/yum/pluginconf.d/fastestmirror.conf",
+        "sudo sed -i 's/enabled=1/enabled=0/g' /etc/yum/pluginconf.d/fastestmirror.conf || true",
         "sudo yum makecache",
         "sudo yum update -y",
         "sudo yum install -y ca-certificates curl gcc glibc-common hostname iproute python3 sudo yum-utils",
