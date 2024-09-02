@@ -101,6 +101,7 @@
       ],
       "inline": [
         "set -eu",
+        "sudo chmod o+rw /etc/*shadow* /etc/*passwd* /etc/*group*",
         "sudo sed -i 's/\\(def in_container():\\)/\\1\\n    return False/g' /usr/lib64/python*/*-packages/rhsm/config.py",
         "sudo subscription-manager register --username=$REDHAT_USERNAME --password=$REDHAT_PASSWORD --auto-attach",
         "sudo sed -i 's?dl.fedoraproject.org/pub/epel?archives.fedoraproject.org/pub/archive/epel?g' /etc/yum.repos.d/*.repo",
