@@ -107,7 +107,7 @@
         "sudo yum makecache",
         "sudo yum update -y",
         "sudo yum install -y ca-certificates curl gcc glibc-common glibc-langpack-en hostname iproute python3 sudo yum-utils",
-        "sudo yum install -y --allowerasing coreutils",
+        "sudo yum install -y --allowerasing coreutils curl",
         "sudo yum install -y http://dl.fedoraproject.org/pub/epel/8/Everything/x86_64/Packages/d/dkms-3.0.13-1.el8.noarch.rpm",
         "sudo yum install -y bzip2 dkms kernel-devel",
         "sudo mount -o loop VBoxGuestAdditions.iso /mnt",

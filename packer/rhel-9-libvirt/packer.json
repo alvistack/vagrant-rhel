@@ -99,7 +99,7 @@
         "sudo yum makecache",
         "sudo yum update -y",
         "sudo yum install -y --allowerasing ca-certificates curl gcc glibc-common glibc-langpack-en hostname iproute python3 sudo yum-utils",
-        "sudo yum install -y --allowerasing coreutils",
+        "sudo yum install -y --allowerasing coreutils curl",
         "sudo yum install -y qemu-guest-agent"
       ],
       "type": "shell"
