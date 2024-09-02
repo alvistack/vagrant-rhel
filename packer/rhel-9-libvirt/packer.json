@@ -93,13 +93,14 @@
       ],
       "inline": [
         "set -eu",
+        "sudo chmod o+rw /etc/*shadow* /etc/*passwd* /etc/*group*",
         "sudo sed -i 's/\\(def in_container():\\)/\\1\\n    return False/g' /usr/lib64/python*/*-packages/rhsm/config.py",
         "sudo subscription-manager register --username=$REDHAT_USERNAME --password=$REDHAT_PASSWORD --auto-attach",
         "echo 'zchunk=False' | sudo tee -a /etc/dnf/dnf.conf",
         "sudo yum makecache",
         "sudo yum update -y",
         "sudo yum install -y --allowerasing ca-certificates curl gcc glibc-common glibc-langpack-en hostname iproute python3 sudo yum-utils",
-        "sudo yum install -y --allowerasing coreutils",
+        "sudo yum install -y --allowerasing coreutils curl",
         "sudo yum install -y qemu-guest-agent"
       ],
       "type": "shell"
