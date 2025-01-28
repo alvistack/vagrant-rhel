@@ -268,7 +268,7 @@ build:rhel-9-virtualbox:
     _PROVIDER: virtualbox
     _ARCHITECTURE: amd64
   needs:
-    - deploy:rhel-9-libvirt
+    - build:rhel-9-libvirt
 
 test:rhel-9-virtualbox:
   <<: *job-molecule-test
@@ -354,7 +354,7 @@ build:rhel-8-virtualbox:
     _PROVIDER: virtualbox
     _ARCHITECTURE: amd64
   needs:
-    - deploy:rhel-8-libvirt
+    - build:rhel-8-libvirt
 
 test:rhel-8-virtualbox:
   <<: *job-molecule-test
@@ -440,7 +440,7 @@ build:rhel-7-virtualbox:
     _PROVIDER: virtualbox
     _ARCHITECTURE: amd64
   needs:
-    - deploy:rhel-7-libvirt
+    - build:rhel-7-libvirt
 
 test:rhel-7-virtualbox:
   <<: *job-molecule-test
