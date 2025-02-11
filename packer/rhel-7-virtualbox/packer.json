@@ -109,7 +109,7 @@
         "sudo sed -i 's/enabled=1/enabled=0/g' /etc/yum/pluginconf.d/fastestmirror.conf || true",
         "sudo yum makecache",
         "sudo yum update -y",
-        "sudo yum install -y ca-certificates curl gcc glibc-common hostname iproute python3 sudo yum-utils",
+        "sudo yum install -y ca-certificates curl gcc glibc-common gnupg2 hostname iproute python3 sudo yum-utils",
         "sudo yum install -y http://archives.fedoraproject.org/pub/archive/epel/7/x86_64/Packages/d/dkms-3.0.12-1.el7.noarch.rpm",
         "sudo yum install -y bzip2 dkms kernel-devel",
         "sudo mount -o loop VBoxGuestAdditions.iso /mnt",

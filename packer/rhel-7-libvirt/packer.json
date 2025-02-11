@@ -99,7 +99,7 @@
         "sudo sed -i 's/enabled=1/enabled=0/g' /etc/yum/pluginconf.d/fastestmirror.conf || true",
         "sudo yum makecache",
         "sudo yum update -y",
-        "sudo yum install -y ca-certificates curl gcc glibc-common hostname iproute python3 sudo yum-utils",
+        "sudo yum install -y ca-certificates curl gcc glibc-common gnupg2 hostname iproute python3 sudo yum-utils",
         "sudo yum install -y qemu-guest-agent"
       ],
       "type": "shell"

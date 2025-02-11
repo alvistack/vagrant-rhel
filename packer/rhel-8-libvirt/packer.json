@@ -98,7 +98,7 @@
         "echo 'zchunk=False' | sudo tee -a /etc/dnf/dnf.conf",
         "sudo yum makecache",
         "sudo yum update -y",
-        "sudo yum install -y ca-certificates curl gcc glibc-common glibc-langpack-en hostname iproute python3 sudo yum-utils",
+        "sudo yum install -y ca-certificates curl gcc glibc-common glibc-langpack-en gnupg2 hostname iproute python3 sudo yum-utils",
         "sudo yum install -y --allowerasing coreutils curl",
         "sudo yum install -y qemu-guest-agent"
       ],
