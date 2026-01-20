@@ -94,9 +94,11 @@
       "inline": [
         "set -eu",
         "sudo sed -i 's/\\(def in_container():\\)/\\1\\n    return False/g' /usr/lib64/python*/*-packages/rhsm/config.py",
-        "sudo subscription-manager register --username=$REDHAT_USERNAME --password=$REDHAT_PASSWORD --auto-attach",
+        "sudo subscription-manager register --username=$REDHAT_USERNAME --password=$REDHAT_PASSWORD",
         "sudo sed -i 's?dl.fedoraproject.org/pub/epel?archives.fedoraproject.org/pub/archive/epel?g' /etc/yum.repos.d/*.repo",
         "sudo sed -i 's/enabled=1/enabled=0/g' /etc/yum/pluginconf.d/fastestmirror.conf || true",
+        "sudo yum makecache",
+        "sudo yum update -y redhat-release",
         "sudo yum makecache",
         "sudo yum update -y",
         "sudo yum install -y ca-certificates curl gcc glibc-common gnupg2 hostname iproute python3 sudo yum-utils",
