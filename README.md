@@ -9,7 +9,7 @@ tag](https://img.shields.io/github/tag/alvistack/vagrant-rhel.svg)](https://gith
 [![GitHub
 license](https://img.shields.io/github/license/alvistack/vagrant-rhel.svg)](https://github.com/alvistack/vagrant-rhel/blob/master/LICENSE)
 [![Vagrant Box
-download](https://img.shields.io/badge/dynamic/json?label=alvistack%2Frhel-9&query=%24.boxes%5B%3A1%5D.downloads&url=https%3A%2F%2Fapp.vagrantup.com%2Fapi%2Fv1%2Fsearch%3Fq%3Dalvistack%2Frhel-9)](https://app.vagrantup.com/alvistack/boxes/rhel-9)
+download](https://img.shields.io/badge/dynamic/json?label=alvistack%2Frhel-10&query=%24.boxes%5B%3A1%5D.downloads&url=https%3A%2F%2Fapp.vagrantup.com%2Fapi%2Fv1%2Fsearch%3Fq%3Dalvistack%2Frhel-10)](https://app.vagrantup.com/alvistack/boxes/rhel-10)
 
 Red Hat Enterprise Linux (often abbreviated to RHEL) is a Linux
 distribution developed by Red Hat for the commercial market. Red Hat
@@ -23,6 +23,9 @@ Learn more about RHEL:
 
 ## Supported Boxes and Respective Packer Template Links
 
+- [`alvistack/rhel-10`](https://app.vagrantup.com/alvistack/boxes/rhel-10)
+  - [`packer/rhel-10-libvirt/packer.json`](https://github.com/alvistack/vagrant-rhel/blob/master/packer/rhel-10-libvirt/packer.json)
+  - [`packer/rhel-10-virtualbox/packer.json`](https://github.com/alvistack/vagrant-rhel/blob/master/packer/rhel-10-virtualbox/packer.json)
 - [`alvistack/rhel-9`](https://app.vagrantup.com/alvistack/boxes/rhel-9)
   - [`packer/rhel-9-libvirt/packer.json`](https://github.com/alvistack/vagrant-rhel/blob/master/packer/rhel-9-libvirt/packer.json)
   - [`packer/rhel-9-virtualbox/packer.json`](https://github.com/alvistack/vagrant-rhel/blob/master/packer/rhel-9-virtualbox/packer.json)
@@ -58,7 +61,7 @@ commands under your [project
 directory](https://learn.hashicorp.com/tutorials/vagrant/getting-started-project-setup?in=vagrant/getting-started):
 
     # Initialize Vagrant
-    vagrant init alvistack/rhel-9
+    vagrant init alvistack/rhel-10
 
     # Start the virtual machine
     vagrant up
@@ -76,8 +79,8 @@ You could also run our
 have [Vagrant](https://www.vagrantup.com/) and
 [Libvirt](https://libvirt.org/) installed, e.g.
 
-    # Run Molecule on RHEL 9
-    molecule converge -s rhel-9-libvirt
+    # Run Molecule on RHEL 10
+    molecule converge -s rhel-10-libvirt
 
 Please refer to [.gitlab-ci.yml](.gitlab-ci.yml) for more information on
 running Molecule.
